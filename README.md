@@ -8,4 +8,6 @@ The goal of this project is to explore factors that contribute to flight delays 
 
 ##Project Status
 
-In development
+## Project Status
+
+In development — data cleaning, exploratory analysis, and baseline model development are complete. Model optimization and an interactive prediction interface are in progress.
