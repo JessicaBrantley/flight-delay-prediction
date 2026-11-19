@@ -50,6 +50,26 @@ Categorical features were encoded, and numerical features were processed using a
 
 I experimented with multiple classification models and selected a Random Forest model for the interactive application.
 
+
+## Model Performance
+
+Three classification models were evaluated using a held-out test set.
+
+| Model | Accuracy | Precision | Recall | F1 Score |
+|---|---:|---:|---:|---:|
+| Logistic Regression | 75.32% | 55.57% | 12.72% | 20.70% |
+| Balanced Logistic Regression | 64.93% | 38.56% | 64.90% | 48.38% |
+| Random Forest | 64.43% | 38.35% | 66.55% | 48.66% |
+
+Although standard Logistic Regression achieved the highest accuracy, it identified only 12.72% of delayed flights.
+
+Random Forest achieved the highest recall (66.55%) and F1 score (48.66%) of the three models, making it the preferred model for this project.
+
+Because delayed flights represent approximately 25% of the dataset, accuracy alone is not sufficient to evaluate model performance.
+
+The selected model still has limitations, particularly its relatively low precision. Its predictions should be treated as experimental rather than reliable operational forecasts.
+
+
 ## Interactive Application
 
 The Streamlit application allows users to select flight details and receive a predicted delay classification along with an estimated delay probability.
@@ -64,6 +84,28 @@ Features include:
 - Input validation
 
 The application uses a saved machine learning model, so predictions can be generated without retraining the model each time.
+
+
+## Application Screenshots
+
+### Flight Prediction Interface
+
+![Flight Prediction Interface](images/app_interface.png)
+
+### Predicted On-Time Arrival
+
+The model predicts an on-time arrival with an estimated
+delay probability of 30.0%.
+
+![Predicted On-Time Arrival](images/predicted_on_time.png)
+
+### Predicted Delayed Arrival
+
+The model predicts a delayed arrival with an estimated
+delay probability of 63.2%.
+
+![Predicted Delayed Arrival](images/predicted_delayed.png)
+
 
 ## Tools and Technologies
 
